@@ -1,0 +1,13 @@
+arr=[{
+	"category":"apti",
+	"no_of_questions":3
+},
+{
+	"category":"reasoning",
+	"no_of_questions":4
+},
+{
+	"category":"computr",
+	"no_of_questions":5
+}
+];
