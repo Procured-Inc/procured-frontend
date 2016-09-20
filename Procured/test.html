@@ -21,6 +21,16 @@
       <script src="js/custom.js"></script>
       <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
       <script>
+	  function loaded()
+	{
+		alert("Beep!");
+		window.setTimeout(CloseMe, 1000);	
+	}
+
+function CloseMe() 
+{
+    window.close();
+}
          var appmod = angular.module("mainApp", []);
          appmod.controller('appController', ['$scope', function($scope) {
          $scope.json = [{
@@ -63,7 +73,7 @@
       </script>
    </head>
     
-   <body>
+   <body onLoad="loaded()">
       <nav class="navbar navbar-default templatemo-nav nav-main" role="navigation">	
          <div class="container">
             <div class="navbar-header">
@@ -78,7 +88,7 @@
               
                   <div class="nav navbar-nav navbar-right text-center">
 					<div id="timer"></div>
-                     <a href="cmplt_src.html"><button class=" meri_class">Complete test</button></a>					
+					<a href="cmplt_src.html"><button class=" meri_class">Complete test</button></a>					
                   </div>
              
             </div>
@@ -130,5 +140,5 @@
          </div>
       </div>
     <script src="js/timer.js"></script>
-   </body>
+	</body>
 </html>
